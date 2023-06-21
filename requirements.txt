@@ -42,7 +42,7 @@ pytz
 pytz-deprecation-shim==0.1.0.post0
 requests
 rich
-scikit-learn
+sklearn
 scipy
 six
 sklearn==0.0.post5
