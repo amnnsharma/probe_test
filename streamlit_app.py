@@ -16,6 +16,15 @@ import glob
 
 
 #Helper functions
+st.set_page_config(page_title="Probe Test", page_icon=":microscope:", layout="wide")
+
+# Use local CSS
+def local_css():
+    with open("style/style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css()
+
 #strem travel distance: STD
 #mst: Maximum stem travel (LST also same)
 def efficiency(lr,std,r,R):
@@ -252,15 +261,6 @@ def flow_efficiency(R,r,H):
 
     return n
 
-
-st.set_page_config(page_title="Probe Test", page_icon=":microscope:", layout="wide")
-
-# Use local CSS
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("style/style.css")
 
 #Navigation Bar
 with st.sidebar:
@@ -517,3 +517,10 @@ if selected=="Contact":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
+
+# Use local CSS
+def local_css1():
+    with open("style/style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css1()
