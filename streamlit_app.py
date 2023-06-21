@@ -383,16 +383,20 @@ if selected=="Analysis":
             #with heading2:
             #    st.write("###### Pressure(psi)")
             table1_data = st.text_area("Enter stem travel (in) & pressure(psi):", height=250)
-            if st.text_input("Port size radius(in):")!="":
-                r=float(st.text_input("Port size radius(in):"))
+            r=st.text_input("Port size radius(in):")
+            if r!="":
+                pass
+                
             else:
                 r=""
 
         with right_table:
             st.subheader("Downstream Travel")
             table2_data = st.text_area("Enter stem travel (in)  & pressure(psi):", height=250)
-            if st.text_input("Ball radius (in):")!="":
-                R=float(st.text_input("Ball radius (in):"))
+            R=st.text_input("Ball radius (in):")
+            if R!="":
+                pass
+                
             else:
                 R=""
 
@@ -478,7 +482,7 @@ if selected=="Analysis":
                 with plot3:
                     st.write("## Laod rate graph as per 19g2:")
                     plt_plobe(df1_new,df2_new,avg_slope, ba, lstd, min(list1[0],list3[0]),max(list1[-1],list3[-1]), min(list2[0],list4[0]),max(list2[-1],list4[-1]),slope=True)
-                    efficiency(avg_slope,lstd,r if r!="" else None,R if R else None)
+                    efficiency(avg_slope,lstd,float(r) if r!="" else None,float(R) if R else None)
 
                 _,plot4,_=st.columns((0.1,3,0.1))
 
@@ -486,7 +490,7 @@ if selected=="Analysis":
                     st.write("## Load rate graph as per 19v2:")
                     slope_v2,mstv2,interceptv2,minimum_travelv2=check_api_manual(list1,list2,list3,list4)
                     plt_plobe(df1_new,df2_new,slope_v2, interceptv2, mstv2, min(list1[0],list3[0]),max(list1[-1],list3[-1]), min(list2[0],list4[0]),max(list2[-1],list4[-1]),slope=True)
-                    efficiency(slope_v2,mstv2,r if r!="" else None,R if R else None)
+                    efficiency(slope_v2,mstv2,float(r) if r!="" else None,float(R) if R else None)
 
 
             else:
