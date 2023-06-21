@@ -1,14 +1,14 @@
 #Libraries installed
 import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 from PIL import Image
 import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import math
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 import matplotlib.pyplot as plt
 import os
