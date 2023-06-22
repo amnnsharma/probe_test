@@ -480,14 +480,14 @@ if selected=="Analysis":
                 _,plot3,_=st.columns((0.1,3,0.1))
                 
                 with plot3:
-                    st.write("## Laod rate graph as per 19g2:")
+                    st.write("## Laod rate graph as per 11g2:")
                     plt_plobe(df1_new,df2_new,avg_slope, ba, lstd, min(list1[0],list3[0]),max(list1[-1],list3[-1]), min(list2[0],list4[0]),max(list2[-1],list4[-1]),slope=True)
                     efficiency(avg_slope,lstd,float(r) if r!="" else None,float(R) if R else None)
 
                 _,plot4,_=st.columns((0.1,3,0.1))
 
                 with plot4:
-                    st.write("## Load rate graph as per 19v2:")
+                    st.write("## Load rate graph as per 11v2:")
                     slope_v2,mstv2,interceptv2,minimum_travelv2=check_api_manual(list1,list2,list3,list4)
                     plt_plobe(df1_new,df2_new,slope_v2, interceptv2, mstv2, min(list1[0],list3[0]),max(list1[-1],list3[-1]), min(list2[0],list4[0]),max(list2[-1],list4[-1]),slope=True)
                     efficiency(slope_v2,mstv2,float(r) if r!="" else None,float(R) if R else None)
