@@ -480,7 +480,7 @@ if selected=="Analysis":
                 _,plot3,_=st.columns((0.1,3,0.1))
                 
                 with plot3:
-                    st.write("## Laod rate graph as per 11g2:")
+                    st.write("## Laod rate graph as per 19g2:")
                     plt_plobe(df1_new,df2_new,avg_slope, ba, lstd, min(list1[0],list3[0]),max(list1[-1],list3[-1]), min(list2[0],list4[0]),max(list2[-1],list4[-1]),slope=True)
                     efficiency(avg_slope,lstd,float(r) if r!="" else None,float(R) if R else None)
 
