@@ -597,7 +597,7 @@ def footer():
         "Made by ",
         link("https://instagram.com/amnn.sharma/", "@amansharma"),
         br(),
-        link("https://buymeacoffee.com/chrischross", image('https://i.imgur.com/thJhzOO.png')),
+        link("https://buymeacoffee.com/amnnsharma", image('https://i.imgur.com/thJhzOO.png')),
     ]
     layout(*myargs)
 
